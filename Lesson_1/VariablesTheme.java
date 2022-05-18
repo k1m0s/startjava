@@ -1,5 +1,6 @@
 public class VariablesTheme {
     public static void main(String[] args){
+
         System.out.println("1-Создание переменных и вывод их значений на консоль.");
         byte cpu = 3;
         short cp = 2200;
@@ -46,53 +47,53 @@ public class VariablesTheme {
         System.out.println("\n" + "5-Перестановка значений переменных.");
         float fMax = Float.MAX_VALUE;
         float fMin = Float.MIN_VALUE;
-        float replace = fMax;
+        float tmpNum = fMax;
         fMax = fMin;
-        fMin = replace;
+        fMin = tmpNum;
         System.out.println("fMax = " + fMax);
         System.out.println("fMin = " + fMin);
 
         System.out.println("\n" + "6-Вывод символов и их кодов.");
-        int sharp,ampersand,at,caret,underscoreСonclusion; 
-        sharp = 35;
-        ampersand = 38;
-        at = 64;
-        caret = 94;
-        underscoreСonclusion = 95;
-        System.out.println("35 - " + (char)sharp + "\n" + "38 - " + (char)ampersand + "\n" + "64 - " + (char)at + "\n" + "94 - " + (char)caret + "\n" + "95 - " + (char)underscoreСonclusion); 
-        
+        char sharp = 35;
+        char ampersand = 38;
+        char at = 64;
+        char caret = 94;
+        char underscoreСonclusion = 95;
+        System.out.println("35 - " + sharp + "\n" + "38 - " + ampersand + "\n" + "64 - " + at ); 
+        System.out.println("94 - " + caret + "\n" + "95 - " + underscoreСonclusion);
+
         System.out.println("\n" + "7-Произведение и сумма цифр числа.");
-        int num = 345;
-        int sumNum = 0;
-        int five, decimal, four, three;
-        five = num % 10;
-        decimal = num / 10;
-        four = decimal % 10;
-        three = decimal / 10;
-        System.out.println("Сумма цифр числа 345 = " + (three + four + five));
-        System.out.println("Произведение цифр числа 345 = " + (three * four * five));
+        int srcNum = 345;
+        int srcUnits = srcNum % 10;
+        int decimal = srcNum / 10;
+        int srcDozens = decimal % 10;
+        int srcHundreds = decimal / 10;
+        int sumNum = srcHundreds + srcDozens + srcUnits;
+        int productNum = srcHundreds * srcDozens * srcUnits;
+        System.out.println("Сумма цифр числа 345 = " + sumNum);
+        System.out.println("Произведение цифр числа 345 = " + productNum);
 
         System.out.println("\n" + "8-Вывод на консоль ASCII-арт Дюка.");
-        int space, leftSlash, rightSlash, underscore, openParent, closeParent;
-        space = 32; 
-        leftSlash = 47;
-        rightSlash = 92;
-        underscore = 95;
-        openParent = 40;
-        closeParent = 41;
-        System.out.println((char)space + "" + (char)space + "" + (char)space + "" + (char)space + "" + (char)leftSlash + "" + (char)rightSlash);
-        System.out.println((char)space + "" + (char)space + "" + (char)space + "" + (char)leftSlash + "" + (char)space + "" + (char)space + "" + (char)rightSlash);
-        System.out.println((char)space + "" + (char)space + "" + (char)leftSlash + "" + (char)underscore + "" + (char)openParent + "" + (char)space + "" + (char)closeParent + "" + (char)rightSlash);
-        System.out.println((char)space + "" + (char)leftSlash + "" + (char)space + "" + (char)space + "" + (char)space + "" + (char)space + "" + (char)space + "" + (char)space + "" + (char)rightSlash);
-        System.out.println((char)leftSlash + "" + (char)underscore + "" + (char)underscore + "" + (char)underscore + "" + (char)underscore + "" + (char)leftSlash + "" + (char)rightSlash + "" + (char)underscore + "" + (char)underscore + "" + (char)rightSlash);
+        char space = 32; 
+        char backslash = 47;
+        char slash = 92;
+        char underscore = 95;
+        char openParent = 40;
+        char closeParent = 41;
+        System.out.println("" + space + space + space + space + backslash + slash + "");
+        System.out.println("" + space + space + space + backslash + space + space + slash + "");
+        System.out.println("" + space + space + backslash + underscore + openParent + space + closeParent + slash + "");
+        System.out.println("" + space + backslash + space + space + space + space + space + space + slash + "");
+        System.out.println("" + backslash + underscore + underscore + underscore + underscore + backslash + 
+            slash + underscore + underscore + slash + "");
 
         System.out.println("\n" + "9-Отображение количества сотен, десятков и единиц числа.");
-        int number, hundreds, dozens, units;
-        number = 123;
-        hundreds = number / 100;
-        dozens = number / 10 % 10;
-        units = number % 10;
-        System.out.println("Число 123 содержит:" + "\n" + hundreds + " - Сотен." + "\n" + dozens + " - Десятков." + "\n" + units + " - Единиц." );
+        int number = 123;
+        int hundreds = number / 100;
+        int dozens = number / 10 % 10;
+        int units = number % 10;
+        System.out.println("Число 123 содержит:" + "\n" + hundreds + " - Сотен.");
+        System.out.println(dozens + " - Десятков." + "\n" + units + " - Единиц.");
 
         System.out.println("\n" + "10-Преобразование секунд.");
         int numberTime = 86399;
@@ -101,6 +102,6 @@ public class VariablesTheme {
         int minutes = hour % 60;
         hour = hour / 60;
         System.out.println( hour + ":" + minutes + ":" + second);
-        
+
     }
 }
