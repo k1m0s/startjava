@@ -1,6 +1,6 @@
 public class VariablesTheme {
-    public static void main(String[] args){
-
+    public static void main(String[] args)
+    {
         System.out.println("1-Создание переменных и вывод их значений на консоль.");
         byte cpu = 3;
         short cp = 2200;
@@ -102,6 +102,5 @@ public class VariablesTheme {
         int minutes = hour % 60;
         hour = hour / 60;
         System.out.println( hour + ":" + minutes + ":" + second);
-
     }
 }
