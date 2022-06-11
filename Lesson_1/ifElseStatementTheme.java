@@ -41,16 +41,16 @@ public class ifElseStatementTheme {
         int srcNum = 3;
         if (srcNum != 0) {
             System.out.println("Число " + srcNum);
-            if (srcNum % 2 == 0) {
-            System.out.println("Четное");
-            } else {
-            System.out.println("Не четное");
-            }
-            if (srcNum < 0) {
-            System.out.println("Отрицательное");
-            } else {
-            System.out.println("Положительное");
-            }
+                if (srcNum % 2 == 0) {
+                System.out.println("Четное");
+                } else {
+                System.out.println("Не четное");
+                }
+                    if (srcNum < 0) {
+                    System.out.println("Отрицательное");
+                    } else {
+                    System.out.println("Положительное");
+                    }
         } else {
         System.out.println("Число - " + srcNum);
         }
