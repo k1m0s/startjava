@@ -41,18 +41,18 @@ public class ifElseStatementTheme {
         int srcNum = 3;
         if (srcNum != 0) {
             System.out.println("Число " + srcNum);
-                if (srcNum % 2 == 0) {
+            if (srcNum % 2 == 0) {
                 System.out.println("Четное");
-                } else {
+            } else {
                 System.out.println("Не четное");
-                }
-                    if (srcNum < 0) {
-                    System.out.println("Отрицательное");
-                    } else {
-                    System.out.println("Положительное");
-                    }
+            }
+            if (srcNum < 0) {
+                System.out.println("Отрицательное");
+            } else {
+                System.out.println("Положительное");
+            }
         } else {
-        System.out.println("Число - " + srcNum);
+            System.out.println("Число - " + srcNum);
         }
 
         System.out.println("\n" + "4-Поиск одинаковых цифр в числах.");
@@ -107,23 +107,23 @@ public class ifElseStatementTheme {
         int historyGrade = 0;
         int programmingGrade = 0;
         if (historyPercent <= 60) {
-             historyGrade = 2;
+            historyGrade = 2;
         } else if (historyPercent > 60 && historyPercent <= 73) {
-             historyGrade = 3;
+            historyGrade = 3;
         } else if (historyPercent > 73 && historyPercent <= 91) {
-             historyGrade = 4;
+            historyGrade = 4;
         } else if (historyPercent > 91) {
-             historyGrade = 5;
+            historyGrade = 5;
         }
 
         if (programmingPercent <= 60) {
-             programmingGrade = 2;
+            programmingGrade = 2;
         } else if (programmingPercent > 60 && programmingPercent <= 73) {
-             programmingGrade = 3;
+            programmingGrade = 3;
         } else if (programmingPercent > 73 && programmingPercent <= 91) {
-             programmingGrade = 4;
+            programmingGrade = 4;
         } else if (programmingPercent > 91) {
-             programmingGrade = 5;
+            programmingGrade = 5;
         }
         System.out.println("Оценка по истории - " + historyGrade);
         System.out.println("Оценка по программированию - " + programmingGrade);
