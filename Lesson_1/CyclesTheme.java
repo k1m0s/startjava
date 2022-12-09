@@ -2,51 +2,58 @@ public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("1-Подсчет суммы четных и нечетных чисел.");
         int sumEven = 0;
-        int sumOddn = 0;
+        int sumOdd = 0;
         int counter = -10;
         do {
             if (counter % 2 == 0) {
                 sumEven += counter;
             } else {
-                sumOddn += counter;
+                sumOdd += counter;
             }
             counter++;
         } while (counter <= 21);
         System.out.println("Сумма четных = " + sumEven);
-        System.out.println("Сумма не четных = " + sumOddn);
+        System.out.println("Сумма не четных = " + sumOdd);
 
         System.out.println("\n2-Вывод чисел в интервале между (max и min).");
-        int max = 10;
-        int middle = 5;
-        int min = -1;
-        if (max > middle && max > min) {
-            for (int i = 0; i < max; i++) {
-            System.out.println(i);
+        int a = 10;
+        int b = 5;
+        int c = -1;
+        int min,max;
+        if (a < b) {
+            min = a;
+        } else {
+            min = b;
             }
-        } else if(middle > max && middle > min) {
-            for (int i = 0; i < middle; i++) {
-            System.out.println(i);
-            }
-        } else if (min > max && min > middle) {
-            for (int i = 0; i < min; i++) {
-            System.out.println(i);
-            }
+        if (min > c) {
+            min = c;
         }
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+        if (max < c) {
+            max = c;
+        }
+        for (int i = max; max >= min; max--) {
+            System.out.print(max + " ");
+        }
+        System.out.println();
 
         System.out.println("\n3-Вывод реверсивного числа и суммы его цифр.");
         int srcNum = 1234;
         int sumDigits = 0;
-        int reverseNum = 0;
         while (srcNum != 0) {
             sumDigits += (srcNum % 10);
             int digit = srcNum % 10;
-            reverseNum = reverseNum * 10 + digit;
             srcNum /= 10;
+            System.out.print(digit);
         }
-        System.out.println(reverseNum + "\n" + sumDigits);
+        System.out.println("\n" + sumDigits);
 
         System.out.println("\n4-Вывод чисел на консоль в несколько строк.");
-        for (int i = 1; i < 24; i+=2) {
+        for (int i = 1; i < 24; i +=2 ) {
             for (int k = 0; k < 5; k++) {
                 if (i < 24) {
                     System.out.printf("%4d", i);
@@ -57,73 +64,70 @@ public class CyclesTheme {
             }
             i -= 2;
             System.out.println();
-        }
+        } 
 
-        System.out.println("\n5-Проверка количества единиц на четность.");
-        int inputNum = 3242592;
-        int inputFinal = inputNum;
-        int even = 0;
-        int odd = 0;
-        while (inputFinal > 0) {
-            if(inputFinal % 2 == 0) {
-                even++;
-            } else {
-                odd++;
+        System.out.println("\n5-Проверка количества двоек на четность/нечетность.");
+        int checkNum = 3242592;
+        int copyCheckNum = checkNum;
+        int equals = 0;
+        int srcRemainder = 0;
+        while (copyCheckNum > 0) {
+            if (srcRemainder == 2) {
+                equals++;
             }
-            inputFinal = inputFinal / 10;
+            srcRemainder = copyCheckNum % 10;
+            copyCheckNum /= 10;
         }
-        System.out.println("Число: " + inputNum + " содержит.");
-        System.out.println("Четное: " + even + ", Не четное: " + odd);
+        if (equals % 2 == 0) {
+            System.out.println("Число " + checkNum + ", содержит " + equals + " четное количество 2");
+        } else {
+            System.out.println("Число " + checkNum + ", содержит " + equals + " нечетное количество 2");
+        }
 
         System.out.println("\n6-Отображение фигур в консоли.");
-        for (int i = 1; i <=5; i++){
-            for (int j = 1; j <= 10; j++){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 10; j++) {
                 System.out.print("*");
             }
-            System.out.println("");
+            System.out.println();
         }
         System.out.println();
 
-        int sharp = 5;
-        while (sharp >= 1) {
+        int firstTriangle = 5;
+        while (firstTriangle >= 1) {
             int j = 1;
-            while (j <= sharp) {
+            while (j <= firstTriangle) {
                 System.out.print("#");
                 j++;
             }
-            System.out.println("");
-            sharp--;
+            System.out.println();
+            firstTriangle--;
         }
         System.out.println();
 
-        int dollar = 0;
+        int numLines;
+        int numSymbolsPerLine = 5;
         do {
-        if (dollar == 0) {
-            System.out.println("$");
-        } else if (dollar > 0 && dollar < 3) {
-            System.out.print("$");
-        } else if (dollar == 3) {
-            System.out.print("\n" + "$");
-        } else if (dollar > 3 && dollar < 6) {
-            System.out.print("$");
-        } else if (dollar == 6) {
-            System.out.print("\n" + "$");
-        } else if (dollar > 6 && dollar < 8) {
-            System.out.print("$");
-        } else {
-            System.out.println("\n" + "$");
-        }
-        dollar++;
-        } while (dollar <= 8);
+            if (numSymbolsPerLine < 3) {
+                numLines = numSymbolsPerLine;
+            } else {
+                numLines = 6 - numSymbolsPerLine;
+            }
+            do {
+                System.out.print("$");
+            } while(--numLines > 0);
+            System.out.println();
+            numSymbolsPerLine--;
+        } while(numSymbolsPerLine > 0);
 
         System.out.println("\n7-Отображение ASCII-символов.");
         System.out.println("DEC" + " CHAR");
         for (int i = 0; i <= 127; i++) {
-            if((char) i < '0' && (i % 2) != 0) {
-                System.out.printf("%3s %4s %n", i, (char) i);
+            if(i < '0' && (i % 2) != 0) {
+                System.out.printf("%3d %4c %n", i, i);
             }
-            if ((char) i > 'a' && (char) i < 'z' && (i % 2) == 0) {
-                System.out.printf("%3s %4s %n", i, (char) i);
+            if (i > 'a' &&  i < 'z' && (i % 2) == 0) {
+                System.out.printf("%3d %4c %n", i, i);
             }
         }
 
@@ -167,13 +171,13 @@ public class CyclesTheme {
         for (int i = 2; i < 10; i++){
             System.out.printf("%3s", "__" + i);
         }
-        System.out.println("");
+        System.out.println();
         for (int j = 2; j < 10; j++){
             System.out.printf("%1s", j + "|");
             for (int k = 2; k < 10; k++) {
                 System.out.printf("%3s", j * k);
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
