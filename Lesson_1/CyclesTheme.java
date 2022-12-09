@@ -115,10 +115,10 @@ public class CyclesTheme {
             }
             do {
                 System.out.print("$");
-            } while(--numLines > 0);
+            } while (--numLines > 0);
             System.out.println();
             numSymbolsPerLine--;
-        } while(numSymbolsPerLine > 0);
+        } while (numSymbolsPerLine > 0);
 
         System.out.println("\n7-Отображение ASCII-символов.");
         System.out.println("DEC" + " CHAR");
