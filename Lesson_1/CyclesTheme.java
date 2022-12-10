@@ -35,7 +35,7 @@ public class CyclesTheme {
         } else if (c > a && c > b) {
             max = c;
         }
-        for (int i = max; i >= min; i--) {
+        for (int i = max; i > min; i--) {
             System.out.print(i + " ");
         }
         System.out.println();
