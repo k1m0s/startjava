@@ -16,38 +16,35 @@ public class CyclesTheme {
         System.out.println("Сумма не четных = " + sumOdd);
 
         System.out.println("\n2-Вывод чисел в интервале между (max и min).");
-        int a = 10;
+        int a = -1;
         int b = 5;
-        int c = -1;
-        int min;
-        int max;
-        if (a < b) {
+        int c = 10;
+        int min = 0;
+        int max = 0;
+        if (a < b && a < c) {
             min = a;
-        } else {
+        } else if (b < a && b < c) {
             min = b;
-            }
-        if (min > c) {
+        } else if (c < a && c < b) {
             min = c;
         }
-        if (a > b) {
+        if (a > b && a > c) {
             max = a;
-        } else {
+        } else if (b > a && b > c) {
             max = b;
-        }
-        if (max < c) {
+        } else if (c > a && c > b) {
             max = c;
         }
-        for (int i = max; max >= min; max--) {
-            System.out.print(max + " ");
+        for (int i = max; i >= min; i--) {
+            System.out.print(i + " ");
         }
         System.out.println();
-
         System.out.println("\n3-Вывод реверсивного числа и суммы его цифр.");
         int srcNum  = 1234;
         int sumDigits = 0;
         while (srcNum != 0) {
-            sumDigits += (srcNum % 10);
             int digit = srcNum % 10;
+            sumDigits += digit;
             srcNum /= 10;
             System.out.print(digit);
         }
@@ -55,7 +52,7 @@ public class CyclesTheme {
 
         System.out.println("\n4-Вывод чисел на консоль в несколько строк.");
         for (int i = 1; i < 24; i +=2 ) {
-            for (int k = 0; k < 5; k++) {
+            for (int j = 0; j < 5; j++) {
                 if (i < 24) {
                     System.out.printf("%4d", i);
                 } else {
@@ -71,12 +68,12 @@ public class CyclesTheme {
         srcNum = 3242592;
         int copySrcNum = srcNum;
         int equals = 0;
+        int digit = 0;
         while (copySrcNum > 0) {
-            int remainder = 0;
-            if (remainder == 2) {
+            if (digit == 2) {
                 equals++;
             }
-            remainder = copySrcNum % 10;
+            digit = copySrcNum % 10;
             copySrcNum /= 10;
         }
         if (equals % 2 == 0) {
@@ -94,20 +91,20 @@ public class CyclesTheme {
         }
         System.out.println();
 
-        int firstTriangle = 5;
-        while (firstTriangle >= 1) {
-            int j = 1;
-            while (j <= firstTriangle) {
+        int numSymbolsPerLine = 5;
+        while (numSymbolsPerLine >= 1) {
+            int numLines = 1;
+            while (numLines <= numSymbolsPerLine) {
                 System.out.print("#");
-                j++;
+                numLines++;
             }
             System.out.println();
-            firstTriangle--;
+            numSymbolsPerLine--;
         }
         System.out.println();
 
         int numLines;
-        int numSymbolsPerLine = 5;
+        numSymbolsPerLine = 5;
         do {
             if (numSymbolsPerLine < 3) {
                 numLines = numSymbolsPerLine;
@@ -133,24 +130,24 @@ public class CyclesTheme {
         }
 
         System.out.println("\n8-Проверка, является ли число палиндромом.");
-        int numInput = 1234321;
+        int palindrome = 1234321;
         int reverse = 0;
-        int polidrom = numInput;
-        while (numInput != 0) {
-            int remainder = numInput % 10;
-            reverse = reverse * 10 + remainder;
-            numInput = numInput / 10;
+        int palindromeCopy = palindrome;
+        while (palindrome > 0) {
+            digit = palindrome % 10;
+            reverse = reverse * 10 + digit;
+            palindrome /= 10;
         }
-        if (polidrom == reverse) {
+        if (palindromeCopy == reverse) {
             System.out.println("Число 1234321 является палиндромом.");
         } else {
             System.out.println("Число 1234321 не является палиндромом.");
         }
 
         System.out.println("\n9-Определение, является ли число счастливым.");
-        int num = 123123;
-        int right = num % 1000;
-        int left = num / 1000;
+        int luckyNum = 123123;
+        int right = luckyNum % 1000;
+        int left = luckyNum / 1000;
         int sumRight = 0;
         int sumLeft = 0;
         for (int i = 3; i > 0; i--) {
