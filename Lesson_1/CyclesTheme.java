@@ -17,31 +17,26 @@ public class CyclesTheme {
 
         System.out.println("\n2-Вывод чисел в интервале между (max и min).");
         int a = -1;
-        int b = 5;
-        int c = 10;
-        int min = 0;
-        int max = 0;
-        if (a < b && a < c) {
-            min = a;
-        } else if (b < a && b < c) {
-            min = b;
-        } else if (c < a && c < b) {
-            min = c;
-        }
-        if (a > b && a > c) {
+        int b = 10;
+        int c = 5;
+        int max = b;
+        int min = a;
+        if (a > max) {
             max = a;
-            max--;
-        } else if (b > a && b > c) {
-            max = b;
-            max--;
-        } else if (c > a && c > b) {
-            max = c;
-            max--;
         }
-        for (int i = max; i > min; i--) {
+        if (c > max) {
+            max = c;
+        }
+        if (b < min) {
+            min = b;
+        }
+        if (c < min) {
+            c = min;
+        }
+        for (int i = --max; i > min; i--) {
             System.out.print(i + " ");
         }
-        System.out.println();
+
         System.out.println("\n3-Вывод реверсивного числа и суммы его цифр.");
         int srcNum  = 1234;
         int sumDigits = 0;
@@ -70,19 +65,18 @@ public class CyclesTheme {
         System.out.println("\n5-Проверка количества двоек на четность/нечетность.");
         srcNum = 3242592;
         int copySrcNum = srcNum;
-        int equals = 0;
-        int digit = 0;
+        int numTwos = 0;
         while (copySrcNum > 0) {
-            if (digit == 2) {
-                equals++;
-            }
-            digit = copySrcNum % 10;
+            int digit = copySrcNum % 10;
             copySrcNum /= 10;
+            if (digit == 2) {
+                numTwos++;
+            }
         }
-        if (equals % 2 == 0) {
-            System.out.println("Число " + srcNum + ", содержит " + equals + " четное количество 2");
+        if (numTwos % 2 == 0) {
+            System.out.println("Число " + srcNum + ", содержит " + numTwos + " четное количество 2");
         } else {
-            System.out.println("Число " + srcNum + ", содержит " + equals + " нечетное количество 2");
+            System.out.println("Число " + srcNum + ", содержит " + numTwos + " нечетное количество 2");
         }
 
         System.out.println("\n6-Отображение фигур в консоли.");
@@ -137,7 +131,7 @@ public class CyclesTheme {
         int reverse = 0;
         int palindromeCopy = palindrome;
         while (palindrome > 0) {
-            digit = palindrome % 10;
+            int digit = palindrome % 10;
             reverse = reverse * 10 + digit;
             palindrome /= 10;
         }
