@@ -12,55 +12,80 @@ public class Jaeger {
     public Jaeger() {
     }
 
-    public Jaeger(String modelName, String mark, String origin, double height, double weight, int strength, int armor, int speed) {
-        this.setModelName(modelName);
-        this.setMark(mark);
-        this.setOrigin(origin);
-        this.setHeight(height);
-        this.setWeight(weight);
-        this.setStrength(strength);
-        this.setArmor(armor);
-        this.setSpeed(speed);
+    public Jaeger(String modelName, String mark, String origin, double height,
+        double weight, int strength, int armor, int speed) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.origin = origin;
+        this.height = height;
+        this.weight = weight;
+        this.strength = strength;
+        this.armor = armor;
+        this.speed = speed;
+    }
+
+    public String getModelName() {
+        return modelName;
     }
 
     public void setModelName(String modelName) {
         this.modelName = modelName;
-        System.out.println("Model Name: " + modelName);
+    }
+
+    public String getMark() {
+        return mark;
     }
 
     public void setMark(String mark) {
         this.mark = mark;
-        System.out.println("Mark: " + mark);
+    }
+
+    public String getOrigin() {
+        return origin;
     }
 
     public void setOrigin(String origin) {
         this.origin = origin;
-        System.out.println("Origin: " + origin);
+    }
+
+    public double getHeight() {
+        return height;
     }
 
     public void setHeight(double height) {
         this.height = height;
-        System.out.println("Height: " + height + " m");
+    }
+
+    public double getWeight() {
+        return weight;
     }
 
     public void setWeight(double weight) {
         this.weight = weight;
-        System.out.println("Weight: " + weight + " Tons");
+    }
+
+    public int getStrength() {
+        return strength;
     }
 
     public void setStrength(int strength) {
         this.strength = strength;
-        System.out.println("Strength: " + strength);
+    }
+
+    public int getArmor() {
+        return armor;
     }
 
     public void setArmor(int armor) {
         this.armor = armor;
-        System.out.println("Armor: " + armor);
+    }
+
+    public int getSpeed() {
+        return speed;
     }
 
     public void setSpeed(int speed) {
         this.speed = speed;
-        System.out.println("Speed: " + speed);
     }
 
     boolean drift() {
@@ -78,10 +103,11 @@ public class Jaeger {
     void useVortexCannon() {
         System.out.println("activated");
     }
-    @Override
+
+     @Override
     public String toString() {
-        return "\n ModelName: " + modelName + "\n Mark: " + mark + "Origin: " + origin + "\n Height: " 
-        + height + " m" + "\n Weight: " + weight + "tons" + "\n Strength: " + strength + "dexterity" 
-        + "\n Armor: " + armor + "\n Speed: " + speed + "\n";
+        return "ModelName: " + modelName + "\nMark: " + mark + "\nOrigin: " + origin + 
+        "\nHeight: " + height + " m" + "\nWeight: " + weight + " tons" + "\nStrength: " + strength + 
+        "\nArmor: " + armor + "\nSpeed: " + speed;
     }
 }
