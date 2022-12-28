@@ -16,8 +16,7 @@ public class Calculator {
         this.sign = sign;
     }
 
-    public int putResult() {
-        int result = 0;
+    public int calculate() {
         switch(sign) {
             case '+':
                 return num1 + num2;
@@ -30,12 +29,8 @@ public class Calculator {
             case '%':
                 return num1 % num2;
             case '^':
-                result = 1;
-                for (int i = 1; i <= num2; i++) {
-                    result *= num1;
-                }
-                break;
+                return (int) Math.pow(num1, num2);
             }
-        return result;
+        return 0;
     }
 }

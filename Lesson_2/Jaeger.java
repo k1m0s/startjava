@@ -9,11 +9,10 @@ public class Jaeger {
     private int armor;
     private int speed;
 
-    public Jaeger() {
-    }
+    public Jaeger() {}
 
     public Jaeger(String modelName, String mark, String origin, double height,
-        double weight, int strength, int armor, int speed) {
+                double weight, int strength, int armor, int speed) {
         this.modelName = modelName;
         this.mark = mark;
         this.origin = origin;
@@ -104,10 +103,10 @@ public class Jaeger {
         System.out.println("activated");
     }
 
-     @Override
+    @Override
     public String toString() {
-        return "ModelName: " + modelName + "\nMark: " + mark + "\nOrigin: " + origin + 
-        "\nHeight: " + height + " m" + "\nWeight: " + weight + " tons" + "\nStrength: " + strength + 
-        "\nArmor: " + armor + "\nSpeed: " + speed;
+                return "ModelName: " + modelName + "\nMark: " + mark + "\nOrigin: " + origin + 
+                "\nHeight: " + height + " m" + "\nWeight: " + weight + " tons" + 
+                "\nStrength: " + strength + "\nArmor: " + armor + "\nSpeed: " + speed;
     }
 }
