@@ -9,7 +9,7 @@ public class GuessNumberTest {
         System.out.print("Hey Player 2 \nEnter the name: ");
         Player player2 = new Player(sc.nextLine());
         System.out.println("\n" + player1.getName() + " & " + player2.getName() + 
-            ", I made a number in the interval (0,100], try to guess.");
+                ", I made a number in the interval (0,100], try to guess.");
         GuessNumber game = new GuessNumber(player1, player2);
         String answer = "yes";
         do {

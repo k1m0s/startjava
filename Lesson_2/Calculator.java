@@ -34,7 +34,7 @@ public class Calculator {
                     result = result * num1;
                 }
                 return result;
-            }
+        }
         return 0;
     }
 }
