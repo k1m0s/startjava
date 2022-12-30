@@ -29,7 +29,11 @@ public class Calculator {
             case '%':
                 return num1 % num2;
             case '^':
-                return (int) Math.pow(num1, num2);
+                int result = 1;
+                for (int i = 1; i <= num2; i++) {
+                    result = result * num1;
+                }
+                return result;
             }
         return 0;
     }

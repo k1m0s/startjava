@@ -105,8 +105,8 @@ public class Jaeger {
 
     @Override
     public String toString() {
-                return "ModelName: " + modelName + "\nMark: " + mark + "\nOrigin: " + origin + 
-                "\nHeight: " + height + " m" + "\nWeight: " + weight + " tons" + 
-                "\nStrength: " + strength + "\nArmor: " + armor + "\nSpeed: " + speed;
+            return "ModelName: " + modelName + "\nMark: " + mark + "\nOrigin: " + origin + 
+            "\nHeight: " + height + " m" + "\nWeight: " + weight + " tons" + 
+            "\nStrength: " + strength + "\nArmor: " + armor + "\nSpeed: " + speed;
     }
 }
