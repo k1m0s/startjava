@@ -13,30 +13,30 @@ public class GuessNumber {
 
     public void launch() {
         Random random = new Random();
-        int compNum = random.nextInt(100) + 1;
+        int secretNum = random.nextInt(100) + 1;
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print(player1.getName() + ", enter the number: ");
             player1.setNumber(sc.nextInt());
-            if (player1.getNumber() == compNum) {
+            if (player1.getNumber() == secretNum) {
                 System.out.println("The Win: " + player1.getName());
                 break;
             }
-            if (player1.getNumber() < compNum) {
+            if (player1.getNumber() < secretNum) {
                 System.out.println("Number " + player1.getNumber() + " more than the I'm guess.");
-            } else if (player1.getNumber() > compNum) {
+            } else if (player1.getNumber() > secretNum) {
                 System.out.println("Number " + player1.getNumber() + " less than the I'm guess.");
             }
 
             System.out.print(player2.getName() + ", enter the number: ");
             player2.setNumber(sc.nextInt());
-            if (player2.getNumber() == compNum) {
+            if (player2.getNumber() == secretNum) {
                 System.out.println("The Win: " + player2.getName());
                 break;
             }
-            if (player2.getNumber() < compNum) {
+            if (player2.getNumber() < secretNum) {
                 System.out.println("Number " + player2.getNumber() + " more than the I'm guess.");
-            } else if (player2.getNumber() > compNum) {
+            } else if (player2.getNumber() > secretNum) {
                 System.out.println("Number " + player2.getNumber() + " less than the I'm guess.");
             }
         }
