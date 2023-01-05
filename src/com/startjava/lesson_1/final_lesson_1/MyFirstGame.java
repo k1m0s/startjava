@@ -1,4 +1,4 @@
-package com.startjava.lesson_1.finalLesson;
+package com.startjava.lesson_1.final_lesson_1;
 
 public class MyFirstGame {
     public static void main(String[] args) {
