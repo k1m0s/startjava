@@ -1,32 +1,35 @@
 package src.com.startjava.lesson_2_3_4.array;
+
 import java.util.Arrays;
+
 public class ArrayTheme {
     public static void main(String[] args) {
         System.out.println("1 - Реверс значений массива.");
-        int[] numbers = {2, 3, 1, 7, 6, 5, 4};
-        int len = numbers.length;
+        int[] intsArray = {2, 3, 1, 7, 6, 5, 4};
+        int len = intsArray.length;
+        String result = "";
         System.out.print("Origin Array: ");
-        printArray(numbers);
-        System.out.print("Revers Array: ");
+        printArray(intsArray);
         for(int i = 0; i < len / 2; i++) {
-            int temp = numbers[len - i - 1];
-            numbers[len - i - 1] = numbers[i];
-            numbers[i] = temp;
+            int temp = intsArray[i];
+            intsArray[i] = intsArray[len - 1 - i];
+            intsArray[len - 1 - i] = temp;
         }
-        printArray(numbers);
+        System.out.print("Revers Array: ");
+        printArray(intsArray);
 
         System.out.println("\n2 - Вывод произведения элементов массива.");
-        int[] elementArray = new int[10];
-        len = elementArray.length;
-        int result = 1;
+        int[] floatsArray = new int[10];
+        len = floatsArray.length;
         for(int i = 0; i < len; i++) {
-            elementArray[i] = i;
+            floatsArray[i] = i;
         }
+        int product = 1;
         for(int i = 1; i < len - 1; i++) {
-            result *= elementArray[i];
-            System.out.print(elementArray[i] +((i < len - 2) ? " * " : " = " + result));
+            product *= floatsArray[i];
+            System.out.print(floatsArray[i] + ((i < len - 2) ? " * " : " = " + product));
         }
-        System.out.print("\n" + "Index[" + elementArray[0] + "] Index[" + elementArray[9] + "]");
+        System.out.print("\n" + "Index[" + floatsArray[0] + "] Index[" + floatsArray[9] + "]");
 
         System.out.println("\n\n3 - Удаление элементов массива.");
         double[] doubleArray = new double[15];
@@ -124,6 +127,7 @@ public class ArrayTheme {
         }
         System.out.println();
     }
+
     private static void printDoubleArray(double[] doubleArray) {
         for (int i = 0; i < doubleArray.length; i++) {
             if (i % 8 == 0) {
