@@ -7,13 +7,12 @@ public class ArrayTheme {
         System.out.println("1 - Реверс значений массива.");
         int[] intsArray = {2, 3, 1, 7, 6, 5, 4};
         int len = intsArray.length;
-        String result = "";
         System.out.print("Origin Array: ");
         printArray(intsArray);
-        for(int i = 0; i < len / 2; i++) {
+        for(int i = 0; i < len; i++) {
             int temp = intsArray[i];
-            intsArray[i] = intsArray[len - 1 - i];
-            intsArray[len - 1 - i] = temp;
+            intsArray[i] = intsArray[--len];
+            intsArray[len] = temp;
         }
         System.out.print("Revers Array: ");
         printArray(intsArray);
