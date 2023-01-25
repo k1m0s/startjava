@@ -10,8 +10,8 @@ public class CalculatorTest {
             if ("yes".equals(answer)) {
                 Calculator calc = new Calculator();
                 System.out.print("Enter a mathematical expression by a space: ");
-                calc.inputExpression(scan.nextLine());
-                System.out.println("Result = " + calc.calculate());
+                String expression = scan.nextLine();
+                System.out.println("Result = " + calc.calculate(expression));
             }
             System.out.print("Do you want to continue expression? [yes/no]: ");
             answer = scan.nextLine();

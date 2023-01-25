@@ -5,17 +5,12 @@ public class Calculator {
     private int num1;
     private int num2;
     private int sign;
-    private String expression;
 
-    public void inputExpression(String expression) {
-        String[] exprArray;
-        exprArray = expression.split(" ");
-        num1 = Integer.parseInt(exprArray[0]);
-        sign = exprArray[1].charAt(0);
-        num2 = Integer.parseInt(exprArray[2]);
-    }
-    public int calculate() {
-        inputExpression(expression);
+    public int calculate(String expression) {
+        String[] partsExpression = expression.split(" ");
+        num1 = Integer.parseInt(partsExpression[0]);
+        sign = partsExpression[1].charAt(0);
+        num2 = Integer.parseInt(partsExpression[2]);
         return switch (sign) {
             case '+' -> Math.addExact(num1, num2);
             case '-' -> Math.subtractExact(num1, num2);
