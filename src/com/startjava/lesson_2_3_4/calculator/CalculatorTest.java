@@ -6,12 +6,16 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String answer = "yes";
+
         do {
             if ("yes".equals(answer)) {
-                Calculator calc = new Calculator();
                 System.out.print("Enter a mathematical expression by a space: ");
                 String expression = scan.nextLine();
-                System.out.println("Result = " + calc.calculate(expression));
+                    try {
+                        System.out.println("Result = " + Calculator.calculate(expression));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("***  Entered numbers must be integer & positive  ***");
+                    }
             }
             System.out.print("Do you want to continue expression? [yes/no]: ");
             answer = scan.nextLine();
