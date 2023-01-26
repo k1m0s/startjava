@@ -11,11 +11,11 @@ public class CalculatorTest {
             if ("yes".equals(answer)) {
                 System.out.print("Enter a mathematical expression by a space: ");
                 String expression = scan.nextLine();
-                    try {
-                        System.out.println("Result = " + Calculator.calculate(expression));
-                    } catch (IllegalArgumentException e) {
-                        System.out.println("***  Entered numbers must be integer & positive  ***");
-                    }
+                try {
+                    System.out.println("Result = " + Calculator.calculate(expression));
+                } catch (IllegalArgumentException e) {
+                    System.out.println("***  Entered numbers must be integer & positive  ***");
+                }
             }
             System.out.print("Do you want to continue expression? [yes/no]: ");
             answer = scan.nextLine();

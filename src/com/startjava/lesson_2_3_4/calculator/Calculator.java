@@ -6,28 +6,8 @@ public class Calculator {
     private static int num2;
     private static int sign;
 
-    public static void partsExpression(String expression) {
-        String[] partsExpression = expression.split(" ");
-            num1 = positiveIntegerNumber(partsExpression[0]);
-            sign = partsExpression[1].charAt(0);
-            num2 = positiveIntegerNumber(partsExpression[2]);
-        if (num1 < 0 || num2 < 0) {
-            throw new IllegalArgumentException();
-        }
-    }
-
-    public static int positiveIntegerNumber(String s) {
-        int num;
-        try {
-            num = Integer.parseInt(s);
-        } catch (NumberFormatException exception) {
-            throw new IllegalArgumentException();
-        }
-        return num;
-    }
-
     public static int calculate(String expression) {
-        partsExpression(expression);
+        usedPartsExpression(expression);
         return switch (sign) {
             case '+' -> Math.addExact(num1, num2);
             case '-' -> Math.subtractExact(num1, num2);
@@ -37,5 +17,25 @@ public class Calculator {
             case '^' -> (int) Math.pow(num1, num2);
             default -> 0;
         };
+    }
+
+    private static void usedPartsExpression(String expression) {
+        String[] partsExpression = expression.split(" ");
+        num1 = keepPositiveNumber(partsExpression[0]);
+        sign = partsExpression[1].charAt(0);
+        num2 = keepPositiveNumber(partsExpression[2]);
+        if (num1 < 1 || num2 < 1) {
+            throw new IllegalArgumentException();
+        }
+    }
+
+    private static int keepPositiveNumber(String gotNum) {
+        int num;
+        try {
+            num = Integer.parseInt(gotNum);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException();
+        }
+        return num;
     }
 }
