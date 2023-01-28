@@ -14,7 +14,7 @@ public class CalculatorTest {
                 try {
                     System.out.println("Result = " + Calculator.calculate(expression));
                 } catch (IllegalArgumentException e) {
-                    System.out.println("***  Entered numbers must be integer & positive  ***");
+                    System.out.println(e.getMessage());
                 }
             }
             System.out.print("Do you want to continue expression? [yes/no]: ");
