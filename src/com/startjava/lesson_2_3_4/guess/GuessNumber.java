@@ -11,7 +11,7 @@ public class GuessNumber {
     private Player[] players;
     private int secretNum;
     public static int NUM_RAUNDS = 3;
-    public static int MAX_ATTEMPS = 4;
+    public static int MAX_ATTEMPS = 10;
     private int rounds;
 
 
