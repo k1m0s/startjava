@@ -6,7 +6,7 @@ public class Player {
 
     private String name;
     private int count;
-    private int[] num = new int[10];
+    private int[] nums = new int[10];
     private int score;
 
     public Player(String name) {
@@ -21,28 +21,28 @@ public class Player {
         return count;
     }
 
-    public void inputNum(int number) {
-        if(number <= 0 || number > 100) {
+    public void inputNum(int num) {
+        if(num <= 0 || num > 100) {
             throw new IllegalArgumentException("Number in interval (0, 100]. Try again");
         }
-        num[count] = number;
+        nums[count] = num;
         count++;
     }
 
-    public int getNumber() {
-        return num[count - 1];
+    public int getNum() {
+        return nums[count - 1];
     }
 
-    public int[] getNum() {
-        return Arrays.copyOf(num, count);
+    public int[] getNums() {
+        return Arrays.copyOf(nums, count);
     }
 
-    public void resetCells() {
-        Arrays.fill(num, 0, count, 0);
+    public void clearAttempts() {
+        Arrays.fill(nums, 0, count, 0);
         count = 0;
     }
 
-    public void score() {
+    public void keepScore() {
         score++;
     }
 }

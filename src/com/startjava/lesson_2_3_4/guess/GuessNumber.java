@@ -14,29 +14,28 @@ public class GuessNumber {
     public static int MAX_ATTEMPS = 10;
     private int rounds;
 
-
     public GuessNumber(Player... players) {
         this.players = players;
     }
 
     public void launch() {
-        costLost();
+        castLots();
         System.out.println("I made a number in the interval (0,100], you have " + MAX_ATTEMPS +
                 " attempts to guess the number.");
         generateSecretNum();
-        while(!step()) {
-
+        while(!begin()) {
+            System.out.println("*** New circle ***");
         }
+        printNumAttempts();
         rounds++;
         if(rounds == NUM_RAUNDS) {
             conclusionWinner();
-            printNumAttempts();
-            resetScores();
+            clearScores();
         }
-        resetPlayers();
+        clearPlayers();
     }
 
-    private void costLost() {
+    private void castLots() {
         for(int i = players.length - 1; i > 1; i--) {
             int j = (int) (Math.random() * i);
             Player temp = players[j];
@@ -50,7 +49,7 @@ public class GuessNumber {
         secretNum = random.nextInt(100) + 1;
     }
 
-    private boolean step() {
+    private boolean begin() {
         Scanner scan = new Scanner(System.in);
         for(Player player : players) {
             if(player.getCount() >= MAX_ATTEMPS) {
@@ -74,16 +73,16 @@ public class GuessNumber {
     }
 
     private boolean compareNums(Player player) {
-        if(player.getNumber() == secretNum) {
-            player.score();
+        if(player.getNum() == secretNum) {
+            player.keepScore();
             System.out.println("Player: " + player.getName() +
                     ", guessed the number " + secretNum +
                     ", with "  + player.getCount() + " attempts");
             return true;
         }
-        String moreLess = player.getNumber() > secretNum ? ", less" : ", more";
+        String moreLess = (player.getNum() > secretNum) ? ", less" : ", more";
         System.out.println(player.getName() + ", you entered number "
-                + player.getNumber() + moreLess + " then I guessed.");
+                + player.getNum() + moreLess + " then I guessed.");
         return false;
     }
 
@@ -112,26 +111,26 @@ public class GuessNumber {
         System.out.println();
     }
 
-    private void resetScores() {
+    private void clearScores() {
         rounds = 0;
         for(Player player : players) {
-            player.resetCells();
+            player.clearAttempts();
         }
     }
 
     private void printNumAttempts() {
         for(Player player : players) {
             System.out.print(player.getName() + " entered these numbers: [ ");
-            for(int num : player.getNum()) {
-                System.out.print(num + " ");
+            for(int nums : player.getNums()) {
+                System.out.print(nums + " ");
             }
             System.out.print("]\n");
         }
     }
 
-    private void resetPlayers() {
+    private void clearPlayers() {
         for(Player player : players) {
-            player.resetCells();
+            player.clearAttempts();
         }
     }
 }
