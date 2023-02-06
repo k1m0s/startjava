@@ -1,6 +1,6 @@
 # startjava
 <h1 align="center">Курс StartJava</h1> 
-<div class="t516__text t-text t-text_sm" style="" field="li_text__1477074826223"><i class="fab fa-github">
+<div class="t516__text t-text t-text_sm" style="" field="li_text__1477074826223">
                                                                                   ✔ Подготовка рабочего окружения <br /> 
                                                                                  ✔ Первая программа <br /> 
                                                                                  ✔ Ручная компиляция и запуск программы <br /> 
@@ -14,5 +14,5 @@
                                                                                  ✔ Система управления версиями Git <br /> 
                                                                                  ✔ Настройка локального репозитория <br /> 
                                                                                  ✔ Итоговые домашние задания<br />
-                                                                                 ✔ Итоговый тест<br /></div></i>
+                                                                                 ✔ Итоговый тест<br /></div>
                                                                                  
