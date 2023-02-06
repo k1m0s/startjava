@@ -23,7 +23,7 @@ public class GuessNumber {
         System.out.println("I made a number in the interval (0,100], you have " + MAX_ATTEMPS +
                 " attempts to guess the number.");
         generateSecretNum();
-        while(!begin()) {
+        while(!isBegin()) {
             System.out.println("*** New circle ***");
         }
         printNumAttempts();
@@ -49,7 +49,7 @@ public class GuessNumber {
         secretNum = random.nextInt(100) + 1;
     }
 
-    private boolean begin() {
+    private boolean isBegin() {
         Scanner scan = new Scanner(System.in);
         for(Player player : players) {
             if(player.getCount() >= MAX_ATTEMPS) {
@@ -59,7 +59,7 @@ public class GuessNumber {
             while (true) {
                 System.out.print(player.getName() + " entered number: ");
                 try {
-                    player.inputNum(scan.nextInt());
+                    player.addNum(scan.nextInt());
                     break;
                 } catch (IllegalArgumentException e) {
                     System.out.println("ERROR: " + e.getMessage());
@@ -74,7 +74,7 @@ public class GuessNumber {
 
     private boolean compareNums(Player player) {
         if(player.getNum() == secretNum) {
-            player.keepScore();
+            player.increment();
             System.out.println("Player: " + player.getName() +
                     ", guessed the number " + secretNum +
                     ", with "  + player.getCount() + " attempts");

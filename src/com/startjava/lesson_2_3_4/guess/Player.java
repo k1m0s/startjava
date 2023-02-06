@@ -21,7 +21,7 @@ public class Player {
         return count;
     }
 
-    public void inputNum(int num) {
+    public void addNum(int num) {
         if(num <= 0 || num > 100) {
             throw new IllegalArgumentException("Number in interval (0, 100]. Try again");
         }
@@ -42,7 +42,7 @@ public class Player {
         count = 0;
     }
 
-    public void keepScore() {
+    public void increment() {
         score++;
     }
 }
