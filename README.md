@@ -1,4 +1,4 @@
-<h1 align="center">[Курс StartJava][https://topjava.ru/startjava]<span style='font-size:100px;'>&#128187;</span></h1> 
+<h1 align="center">[Курс StartJava](http://topjava.ru/startjava/ " ")<span style='font-size:100px;'>&#128187;</span></h1> 
 <h2><strong>&#128193; Занятие первое</strong></h2>
 <div class="t516__text t-text t-text_sm" style="" field="li_text__1477074826223">
                                                                                  ✔ Подготовка рабочего окружения </br> 
