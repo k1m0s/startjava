@@ -1,5 +1,5 @@
 <h1 align="center">Курс StartJava</h1> 
-<h2><strong>&#10148; Занятие первое</strong></h2>
+<h2><strong>&#10148; Занятие первое</strong></h2><a href="#" target="_blank"><i class="fa fa-github fa-2x"></i></a>
 <div class="t516__text t-text t-text_sm" style="" field="li_text__1477074826223">
                                                                                  ✔ Подготовка рабочего окружения <br /> 
                                                                                  ✔ Первая программа <br /> 
