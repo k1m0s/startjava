@@ -1,4 +1,16 @@
 # startjava
 <h1 align="center">Курс StartJava</h1> 
-</div></div><div class="t516__sectiontextwrapper t516__textwr-bottompadding"><div class="t516__time t516__time_mobile t-name t-name_xl t516__bottommargin" style="" field="li_time__1477074826223">Первая неделя</div><div class="t516__text t-text t-text_sm" style="" field="li_text__1477074826223">✔ Подготовка рабочего окружения <br /> ✔ Первая программа <br /> ✔ Ручная компиляция и запуск программы <br /> ✔ Этапы компиляции и запуска <br /> ✔ Байт-код<br />✔ Переменные: примитивные типы данных<br />✔ Домашние задания по теме "Переменные"<br />✔ Ветвление (if, if else)<br /> ✔ Домашние задания по теме "Ветвление"<br />✔ Цикл (while, for)<br />✔ Домашние задания по теме "Циклы" <br /> ✔ Система управления версиями Git <br /> ✔ Настройка локального репозитория <br /> ✔ Итоговые домашние задания<br />✔ Итоговый тест<br /></div></div></div></div></div><div class="t516__row t-row t516__item2"><div class="t516__leftcol t-col t-col_2 t-prefix_1 t-align_right"><div class="t516__time t-name t-name_xl" style="" field="li_time__1477074830470">Вторая неделя</div></div><div class="t516__rightcol t516__rightcol_2 t-col t-col_8"><div class="t516__righttablewrapper" ><div class="t516__line" style=" "></div><div class="t516__timelinewrapper" style=""><div class="t516__circlewrapper t516__circlewrapper_img" style="top:-31px; "><div class="t516__img t-bgimg" data-original="https://static.tildacdn.com/tild3332-6665-4239-a535-616236653832/java_2.svg" 
-bgimgfield="li_img__1477074830470"
+<div class="t516__text t-text t-text_sm" style="" field="li_text__1477074826223">✔ Подготовка рабочего окружения <br /> 
+                                                                                 ✔ Первая программа <br /> 
+                                                                                 ✔ Ручная компиляция и запуск программы <br /> 
+                                                                                 ✔ Этапы компиляции и запуска <br /> 
+                                                                                 ✔ Байт-код<br />✔ Переменные: примитивные типы данных<br />
+                                                                                 ✔ Домашние задания по теме "Переменные"<br />
+                                                                                 ✔ Ветвление (if, if else)<br /> 
+                                                                                 ✔ Домашние задания по теме "Ветвление"<br />
+                                                                                 ✔ Цикл (while, for)<br />
+                                                                                 ✔ Домашние задания по теме "Циклы" <br /> 
+                                                                                 ✔ Система управления версиями Git <br /> 
+                                                                                 ✔ Настройка локального репозитория <br /> 
+                                                                                 ✔ Итоговые домашние задания<br />
+                                                                                 ✔ Итоговый тест<br /></div>
